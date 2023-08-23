@@ -69,7 +69,7 @@ def CompareStatIncreases(baseAtk, crAtk, critRate, critDmg, atkInc, rateInc, dmg
     atkWin = round(GetDamage(crAtk + baseAtk * atkInc, critRate, critDmg) - baseDamage)
     rateWin = round(GetDamage(crAtk, critRate + rateInc, critDmg) - baseDamage)
     dmgWin = round(GetDamage(crAtk, critRate, critDmg + dmgInc) - baseDamage)
-    text = " is the most beinificial stat increase"
+    text = " is the most benificial stat increase"
     if (atkWin > rateWin and atkWin > dmgWin):
         text = "Atk stat" + text
     elif (rateWin > dmgWin):
@@ -92,14 +92,14 @@ critDmgIncrement = 0.02
 critRateCompare = 0.324
 critDmgCompare = 0.648
 
-CritRate, CritDmg, XAxis, YAxis = GetCritStats(crAtk, critRate, critDmg, critRateIncrement, critDmgIncrement)
-DrawGraph(CritRate, CritDmg, atkIncBase, XAxis, YAxis)
+#CritRate, CritDmg, XAxis, YAxis = GetCritStats(crAtk, critRate, critDmg, critRateIncrement, critDmgIncrement)
+#DrawGraph(CritRate, CritDmg, atkIncBase, XAxis, YAxis)
 
-baseAtk = 1169
-crAtk = 3289
-critRate = 0.571
-critDmg = 2.638
-atkInc = 0.04
-rateInc = 0.03
-dmgInc = 0.06
+baseAtk = 1222
+crAtk = 2955
+critRate = 0.466
+critDmg = 3.046
+atkInc = 0.4
+rateInc = 0.3
+dmgInc = 0.6
 CompareStatIncreases(baseAtk, crAtk, critRate, critDmg, atkInc, rateInc, dmgInc)
